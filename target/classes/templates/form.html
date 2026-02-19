@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <form th:action="@{/emp}" th:object="${employee}" method = "post">
+            <label>Employee Number</label>
+            <input type="number" th:field="*{EmpNo}"/><br/>
+            <label>First Name</label>
+            <input type="text" th:field="*{FirstName}"/><br/>
+            <label>Last Name</label>
+            <input type="text" th:field="*{LastName}"/><br/>
+     
+            <button type="submit">Add</button>
+        </form>
+    </body>
+</html>
